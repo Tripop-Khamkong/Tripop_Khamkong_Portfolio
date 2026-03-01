@@ -1,3 +1,16 @@
-<header>
-
-</header>
+---
+import hamburger from "../assets/icons/hamburger-icon.svg";
+import brandIcon from "../assets/icons/brand-icon.svg";
+---
+<div class="fixed top-0 bg-[#181A27] flex items-center w-dvw h-24 text-white border-b border-gray-800 justify-between px-14">  
+  <div class="flex items-center gap-2 ">
+  <img class="w-10 " src={brandIcon.src} alt="brand-icon">
+    <p class="text-2xl">3PKX</p>
+  </div>
+  <div class=" flex gap-4 items-center">
+    <a class="bg-[#1D2024] rounded-full px-4 py-3" href="#">Contact Me</a>
+    <button class="text-2xl bg-[#1D2024] rounded-full p-3.5 ">
+      <img class="w-5 h-5 invert" src={hamburger.src} alt="hamburger">
+    </button>
+  </div>
+</div>
