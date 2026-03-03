@@ -12,5 +12,4 @@ export default defineConfig({
   },
 
   adapter: netlify(),
-  output: 'static',
 });
