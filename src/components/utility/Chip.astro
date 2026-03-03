@@ -1,0 +1,11 @@
+---
+interface ChipProps {
+  title: string;
+}
+
+const { title } = Astro.props as ChipProps;
+---
+
+<div class="rounded-full border border-gray-400 bg-[#68686833] px-4 py-2">
+  <p class="text-sm font-bold">{title}</p>
+</div>

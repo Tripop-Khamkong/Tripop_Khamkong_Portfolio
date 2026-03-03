@@ -1,21 +1,58 @@
 ---
+import { Image } from "astro:assets";
+import Chip from "./Chip.astro";
+
 interface CardProps {
-  title: string
-  img?: string
-  description?: string
-  categorys?: string[]
-  about?: string
+  title: string;
+  img?: string;
+  time?: string;
+  categorys?: string[];
+  about?: string;
 }
 
-const { title,img, description = '', categorys = [], about = '' } = Astro.props as CardProps
+const {
+  title,
+  img,
+  time: description = "",
+  categorys = [],
+  about = "",
+} = Astro.props as CardProps;
 ---
 
-<div> 
- {img && <div>
-    <img src={img} alt={title} />
- </div>}
- <p>{title}</p>
- <p>{description}</p>
- <p>{about}</p>
-{categorys.map((category) => <p>{category}</p>)}
+<div
+  class="group relative h-138 w-138 overflow-hidden rounded-lg border border-gray-600 bg-linear-to-br from-[#161825] from-50% to-[#2F4273] p-4"
+>
+  {
+    img && (
+      <div class="rounded-sm transition-opacity duration-300 group-hover:opacity-0">
+        <Image
+          width={520}
+          height={294}
+          class="rounded-md"
+          src={img}
+          alt={title}
+        />
+      </div>
+    )
+  }
+
+  <!-- Content -->
+  <div
+    class="flex flex-col justify-center gap-3 p-6 transition-opacity duration-300 group-hover:absolute group-hover:top-0"
+  >
+    <p class="text-4xl font-bold">{title}</p>
+    <p class="text-md font-light">{description}</p>
+
+    <div class="flex flex-wrap gap-2">
+      {categorys.map((category) => <Chip title={category} />)}
+    </div>
+
+    {
+      about && (
+        <p class="mt-2 text-sm text-gray-300 opacity-0 group-hover:opacity-100">
+          {about}
+        </p>
+      )
+    }
+  </div>
 </div>
