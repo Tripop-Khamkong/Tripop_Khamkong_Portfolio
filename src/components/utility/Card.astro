@@ -1,0 +1,21 @@
+---
+interface CardProps {
+  title: string
+  img?: string
+  description?: string
+  categorys?: string[]
+  about?: string
+}
+
+const { title,img, description = '', categorys = [], about = '' } = Astro.props as CardProps
+---
+
+<div> 
+ {img && <div>
+    <img src={img} alt={title} />
+ </div>}
+ <p>{title}</p>
+ <p>{description}</p>
+ <p>{about}</p>
+{categorys.map((category) => <p>{category}</p>)}
+</div>

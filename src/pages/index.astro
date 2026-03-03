@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import HeroSection from '../components/HeroSection.astro'
-import AboutMeSection from '../components/AboutMeSection.astro'
+import MainSection from '../components/section/main/MainSection.astro'
+import ProjectSection from '../components/section/project/ProjectSection.astro'
 import '../styles/global.css'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -9,10 +9,8 @@ import '../styles/global.css'
 ---
 
 <Layout>
-  <div class="px-16">
-    <div>
-      <HeroSection />
-      <AboutMeSection />
-    </div>
-  </div></Layout
->
+  <div class="m-16 flex flex-col gap-11">
+    <MainSection />
+    <ProjectSection/>
+  </div>
+</Layout>
