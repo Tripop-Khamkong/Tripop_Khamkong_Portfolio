@@ -1,15 +1,29 @@
 ---
-import hamburger from "../assets/icons/hamburger-icon.svg";
+import hamburger from '../assets/icons/hamburger-icon.svg'
 ---
-<div class="fixed top-0 bg-[#181A27] flex items-center w-dvw h-24 border-b border-gray-800 justify-between px-57 ">  
-  <div class="flex items-center gap-2 ">
-  <img class="w-10 " src='/brand-icon.svg' alt="brand-icon">
-    <p class="text-2xl">3PKX</p>
-  </div>
-  <div class=" flex gap-4 items-center">
-    <a class="bg-[#1D2024] rounded-full px-4 py-3 hover:bg-mist-900" href="#">Contact Me</a>
-    <button class="text-2xl bg-[#1D2024] hover:bg-mist-900 rounded-full p-3.5 ">
-      <img class="w-5 h-5 invert" src={hamburger.src} alt="hamburger">
-    </button>
+
+<div
+  class="fixed top-0 left-0 w-full h-24 bg-[#181A27] border-b border-gray-800"
+>
+  <div class="grid grid-cols-layout h-full">
+    <div class="col-start-2 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img class="w-10" src="/brand-icon.svg" alt="brand-icon" />
+        <p class="text-2xl">3PKX</p>
+      </div>
+
+      <div class="flex gap-4 items-center">
+        <a
+          class="bg-[#1D2024] rounded-full px-4 py-3 hover:bg-mist-900"
+          href="#"
+        >
+          Contact Me
+        </a>
+
+        <button class="bg-[#1D2024] hover:bg-mist-900 rounded-full p-3.5">
+          <img class="w-5 h-5 invert" src={hamburger.src} alt="hamburger" />
+        </button>
+      </div>
+    </div>
   </div>
 </div>
