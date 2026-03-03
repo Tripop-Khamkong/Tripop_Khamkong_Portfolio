@@ -1,20 +1,20 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 ---
 
 <div class="flex items-center justify-between">
   <div class="flex flex-col">
     <p class="text-3xl">Hi, I'm</p>
     <div
-      class="text-8xl h-max font-bold flex flex-col pr-10 border-r border-gray-400"
+      class="flex h-max flex-col border-r border-gray-400 pr-10 text-8xl font-bold"
     >
       <p>TRIPOP</p>
       <p>KHAMKONG</p>
     </div>
   </div>
-  <div class="w-70 h-70">
+  <div class="h-70 w-70">
     <Image
-      class="rounded-full object-cover ml-10"
+      class="ml-10 rounded-full object-cover"
       width={280}
       height={280}
       src="/profile.jpg"
