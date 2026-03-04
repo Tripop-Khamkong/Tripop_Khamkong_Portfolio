@@ -1,0 +1,25 @@
+---
+import { SKILL_AND_TOOLS_INFORMATION } from "../../../data/skillAndToolData";
+import ItemCard from "../../utility/ItemCard.astro";
+---
+
+<div class="col-start-2 flex flex-col gap-3">
+  <div class="flex flex-col gap-3">
+    <p class="h-max text-4xl font-bold">MY SKILLS AND TOOLS</p>
+    <p class="font-light">
+      I am interested in new technologies and am always adaptable and up to date
+      with trends.
+    </p>
+  </div>
+  <div class="mt-4 grid grid-cols-2 items-center gap-y-4">
+    {
+      SKILL_AND_TOOLS_INFORMATION.map((project) => (
+        <ItemCard
+          icon={project.icon}
+          title={project.title}
+          descriptions={project.descriptions}
+        />
+      ))
+    }
+  </div>
+</div>

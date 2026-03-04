@@ -1,7 +1,7 @@
 export const PROFILE_INFORMATION = [
   {
     title: "Phiilip Pocket",
-    img: "/profile.jpg",
+    img: "/projects/fame.jpg",
     time: "2026",
     categorys: ["UX/UI", "Mobile App"],
     about:
@@ -9,7 +9,7 @@ export const PROFILE_INFORMATION = [
   },
   {
     title: "Phiilip FAME",
-    img: "/profile.jpg",
+    img: "/projects/fame.jpg",
     time: "2026",
     categorys: ["UX/UI", "Admin Website"],
     about:
@@ -17,7 +17,7 @@ export const PROFILE_INFORMATION = [
   },
   {
     title: "Design System",
-    img: "/profile.jpg",
+    img: "/projects/design-system.jpg",
     time: "2025 - Present ",
     categorys: ["Design System"],
     about:
@@ -25,7 +25,7 @@ export const PROFILE_INFORMATION = [
   },
   {
     title: "AVATR",
-    img: "/profile.jpg",
+    img: "/projects/avatr.jpg",
     time: "2026",
     categorys: ["Freelance", "Website"],
     about:
