@@ -1,6 +1,6 @@
 ---
 import { PROFILE_INFORMATION } from "../../../data/profileData";
-import Card from "../../utility/Card.astro";
+import ProjectCard from "../../utility/ProjectCard.astro";
 ---
 
 <div class="col-start-2 flex flex-col gap-3">
@@ -11,10 +11,10 @@ import Card from "../../utility/Card.astro";
       organization by aligning with the target audience.
     </p>
   </div>
-  <div class="flex flex-wrap justify-between gap-13">
+  <div class="mt-4 flex flex-wrap justify-between gap-13">
     {
       PROFILE_INFORMATION.map((project) => (
-        <Card
+        <ProjectCard
           title={project.title}
           img={project.img}
           time={project.time}
