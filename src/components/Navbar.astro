@@ -1,10 +1,4 @@
----
-import hamburger from "../assets/icons/hamburger-icon.svg";
----
-
-<div
-  class="fixed top-0 z-10 col-span-full col-start-1 w-dvw border-b border-gray-800 bg-[#181A27]"
->
+<div class="fixed top-0 z-10 col-span-full col-start-1 w-dvw bg-[#181A27]">
   <div class="grid-cols-layout grid">
     <div class="col-start-2 flex h-24 items-center justify-between">
       <div class="flex items-center gap-2">
@@ -21,9 +15,15 @@ import hamburger from "../assets/icons/hamburger-icon.svg";
         </a>
 
         <button class="rounded-full bg-[#1D2024] p-3.5 hover:bg-mist-900">
-          <img class="h-5 w-5 invert" src={hamburger.src} alt="hamburger" />
+          <img
+            class="h-5 w-5 invert"
+            src="/icons/hamburger-icon.svg"
+            alt="hamburger"
+          />
         </button>
       </div>
     </div>
+  </div>
+  <div class="h-0.5 bg-radial from-[#979797] from-50% to-[#313131] opacity-20">
   </div>
 </div>

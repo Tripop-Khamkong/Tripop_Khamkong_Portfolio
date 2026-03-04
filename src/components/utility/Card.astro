@@ -13,18 +13,55 @@ interface CardProps {
 const {
   title,
   img,
-  time: description = "",
+  time = "",
   categorys = [],
   about = "",
 } = Astro.props as CardProps;
 ---
 
 <div
-  class="group relative h-138 w-138 overflow-hidden rounded-lg border border-gray-600 bg-linear-to-br from-[#161825] from-50% to-[#2F4273] p-4"
+  class="group relative h-138 w-138 overflow-hidden rounded-lg border border-gray-600 bg-linear-to-br from-[#262626] from-20% via-[#192850] via-80% to-[#2F4273] to-100% p-4"
 >
+  <Image
+    width={200}
+    height={200}
+    class="absolute top-0 left-0 z-0 object-cover opacity-100 transition-opacity duration-300 group-hover:opacity-0"
+    src={"/decoration/border-top.svg"}
+    alt="top-border"
+  />
+  <Image
+    width={100}
+    height={100}
+    class="absolute right-0 bottom-0 z-0 object-cover opacity-100 transition-opacity duration-300 group-hover:opacity-0"
+    src={"/decoration/border-bottom-horizontal.svg"}
+    alt="bottom-border-horizontal"
+  />
+  <Image
+    width={100}
+    height={100}
+    class="absolute right-0 bottom-0 z-0 object-cover opacity-100 transition-opacity duration-300 group-hover:opacity-0"
+    src={"/decoration/border-bottom-vertical.svg"}
+    alt="bottom-border-vertical"
+  />
+  <div class="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-100">
+    <Image
+      width={500}
+      height={500}
+      class="absolute h-full w-full"
+      src="/decoration/grid-horizontal.svg"
+      alt={title}
+    />
+    <Image
+      width={500}
+      height={500}
+      class="absolute h-full w-full"
+      src="/decoration/grid-vertical.svg"
+      alt={title}
+    />
+  </div>
   {
     img && (
-      <div class="rounded-sm transition-opacity duration-300 group-hover:opacity-0">
+      <div class="z-10 rounded-sm transition-opacity duration-300 group-hover:opacity-0">
         <Image
           width={520}
           height={294}
@@ -36,12 +73,11 @@ const {
     )
   }
 
-  <!-- Content -->
   <div
     class="flex flex-col justify-center gap-3 p-6 transition-opacity duration-300 group-hover:absolute group-hover:top-0"
   >
     <p class="text-4xl font-bold">{title}</p>
-    <p class="text-md font-light">{description}</p>
+    <p class="text-md font-light">{time}</p>
 
     <div class="flex flex-wrap gap-2">
       {categorys.map((category) => <Chip title={category} />)}
